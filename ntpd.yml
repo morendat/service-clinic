@@ -6,10 +6,10 @@
 
  - name: Make sure the package is installed
    package: #module 1
-	   name: ntpd
-	   state: present
+    name: ntpd
+    state: present
 
  - name: Make sure that service is started
    services: #module 2
-	  name: ntpd
-	  state: started
+    name: ntpd
+    state: started
