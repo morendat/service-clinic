@@ -1,0 +1,14 @@
+---
+hosts: localhost
+tasks: 
+-make: time right
+     tasks:
+	-name: Make sure that the package is installed
+	 package:
+	   name: ntpd
+	   state: present
+
+-make: Make sure that service is started
+	services: 
+	  name: ntpd
+	  state: started
