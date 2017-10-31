@@ -1,14 +1,15 @@
 ---
-hosts: localhost
-tasks: 
--make: time right
-     tasks:
-	-name: Make sure that the package is installed
-	 package:
+- name: Make time right
+
+  hosts: localhost
+  tasks: #tasks - 2 tasks in this playbook 
+
+ - name: Make sure the package is installed
+   package: #module 1
 	   name: ntpd
 	   state: present
 
--make: Make sure that service is started
-	services: 
+ - name: Make sure that service is started
+   services: #module 2
 	  name: ntpd
 	  state: started
